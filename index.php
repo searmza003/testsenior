@@ -1,4 +1,5 @@
 <?php session_start(); 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,23 +17,26 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>               
                     <ul class="navbar-nav ml-auto">
-                        <?php if (isset($_SESSION['id'])) { ?>                       
-                        <li class="nav-item dropdown">
+                    <?php if (isset($_SESSION['id'])) { ?>                                           
+                        <li class="nav-item dropdown"> 
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            ยินดีต้อนรับคุณ...
+                            ยินดีต้อนรับ : <?php echo $_SESSION['name']; ?>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="#">Action</a>
                             <a class="dropdown-item" href="#">Another action</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">ออกจากระบบ</a>
+                            <a class="dropdown-item" href="logout.php">ออกจากระบบ</a>
                             </div>
-                        </li>
-                        <?php } else { ?>
+                        </li>                        
+                    <?php }else { ?>
                         <li class="nav-item">
                             <a class="nav-link " href="login.php">เข้าสู่ระบบ</a>
                         </li>
-                        <?php } ?>
+                        <li class="nav-item">
+                            <a class="nav-link " href="login.php">สมัครเข้าใช้งาน</a>
+                        </li>
+                    <?php } ?>
                     </ul>                     
                 </div>
        </div>

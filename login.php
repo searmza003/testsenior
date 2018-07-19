@@ -22,9 +22,10 @@
 
          if($result->num_rows > 0){
                 $row = $result->fetch_assoc();
-                $_SESSION['id'] = $row['id'];
-                $_SESSION['fname'] = $row['fname'];
+                $_SESSION['id'] = $row['ID'];
+                $_SESSION['name'] = $row['fname'];
                 header('location:index.php');
+               
          } else{
 
             echo"<script language=\"JavaScript\">";
@@ -40,7 +41,7 @@
         <div class="row">
             <div class="col-md-8 mx-auto mt-5">
                 <div class="card">
-                <form action="login.php" method="POST">
+                <form action="" method="POST">
                     <div class="card-header text-center">
                     กรุณาเข้าสู่ระบบเพื่อใช้งาน
                     </div>
