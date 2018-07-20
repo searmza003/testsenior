@@ -39,25 +39,27 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-8 mx-auto mt-5">
+            <div class="col-md-5 mx-auto mt-5">
                 <div class="card">
                 <form action="" method="POST">
-                    <div class="card-header text-center">
-                    กรุณาเข้าสู่ระบบเพื่อใช้งาน
+                    <div class="text-center mb-4">
+                        <img class="mb-4" src="logo.png" alt="" width="128" height="128">
+                        <h1 class="h3 mb-3 font-weight-normal">เข้าสู่ระบบ</h1>
                     </div>
                     <div class="card-body">
                         <div class="form-group row">
-                            <label for="username" class="col-sm-3 col-form-label">ชื่อผู้ใช้งาน</label>
+                            <label for="username" class="col-sm-3 col-form-label"></label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="username" name="username" required autofocus > 
+                                <input type="text" class="form-control" id="username" name="username" placeholder="ชื่อผู้ใช้งาน" required autofocus > 
                             </div>                           
                         </div>
                         <div class="form-group row">
-                            <label for="password" class="col-sm-3 col-form-label">รหัสผ่าน</label>
+                            <label for="password" class="col-sm-3 col-form-label"></label>
                             <div class="col-sm-9">
-                                <input type="password" class="form-control" id="password" name="password" required>  
+                                <input type="password" class="form-control" id="password" name="password" placeholder="รหัสผ่าน" required>  
                             </div>                          
                         </div>
+                    </div>
                     </div>
                     <div class="card-footer text-center">
                         <input type="submit" name="submit" class="btn btn-success" value="ลงชื่อเข้าใช้">
