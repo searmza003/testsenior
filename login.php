@@ -16,10 +16,8 @@
         if(isset($_POST['submit'])){
         $username = $_POST['username'];
         $password = $conn->real_escape_string ($_POST['password']);
-
          $sql = "SELECT * FROM `account` WHERE `username` = '".$username."' AND `password` = '".$password."'";  
          $result = $conn->query($sql);
-
          if($result->num_rows > 0){
                 $row = $result->fetch_assoc();
                 $_SESSION['id'] = $row['ID'];
@@ -27,39 +25,35 @@
                 header('location:index.php');
                
          } else{
-
             echo"<script language=\"JavaScript\">";
             echo"alert('มึงใส่ชื่อผู้ใช้ หรือ รหัสผ่านผิดหรือป่าว ไอ้สัส !!')";
             echo"</script>";
              //echo 'มึงใส่ชื่อผู้ใช้ หรือ รหัสผ่านผิดหรือป่าว ไอ้สัส !!';
          }
-
         }
     ?>
 
     <div class="container">
         <div class="row">
-            <div class="col-md-5 mx-auto mt-5">
+            <div class="col-md-8 mx-auto mt-5">
                 <div class="card">
                 <form action="" method="POST">
-                    <div class="text-center mb-4">
-                        <img class="mb-4" src="logo.png" alt="" width="128" height="128">
-                        <h1 class="h3 mb-3 font-weight-normal">เข้าสู่ระบบ</h1>
+                    <div class="card-header text-center">
+                    กรุณาเข้าสู่ระบบเพื่อใช้งาน
                     </div>
                     <div class="card-body">
                         <div class="form-group row">
-                            <label for="username" class="col-sm-3 col-form-label"></label>
+                            <label for="username" class="col-sm-3 col-form-label">ชื่อผู้ใช้งาน</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="username" name="username" placeholder="ชื่อผู้ใช้งาน" required autofocus > 
+                                <input type="text" class="form-control" id="username" name="username" placeholder="username" required autofocus > 
                             </div>                           
                         </div>
                         <div class="form-group row">
-                            <label for="password" class="col-sm-3 col-form-label"></label>
+                            <label for="password" class="col-sm-3 col-form-label">รหัสผ่าน</label>
                             <div class="col-sm-9">
-                                <input type="password" class="form-control" id="password" name="password" placeholder="รหัสผ่าน" required>  
+                                <input type="password" class="form-control" id="password" name="password" placeholder="password" required>  
                             </div>                          
                         </div>
-                    </div>
                     </div>
                     <div class="card-footer text-center">
                         <input type="submit" name="submit" class="btn btn-success" value="ลงชื่อเข้าใช้">
