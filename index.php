@@ -17,7 +17,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>               
                     <ul class="navbar-nav ml-auto">
-                    <?php if (isset($_SESSION['id'])) { ?>                                           
+                    <?php if (isset($_SESSION['d'])) { ?>                                           
                         <li class="nav-item dropdown"> 
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             ยินดีต้อนรับ : <?php echo $_SESSION['name']; ?>
