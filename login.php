@@ -21,7 +21,7 @@
          if($result->num_rows > 0){
                 $row = $result->fetch_assoc();
                 $_SESSION['id'] = $row['ID'];
-                $_SESSION['name'] = $row['fname'];
+                $_SESSION['name'] = $row['username'];
                 header('location:index.php');
                
          } else{
